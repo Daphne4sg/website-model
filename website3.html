@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    box-sizing: border-box;
+}
+/* style the body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+/* header (logo title) */
+.header{
+    padding:80px;
+    text-align: center;
+    background: blue;
+    color:white;
+}
+
+/* increase the font size of the heading */
+.header h1{
+    padding: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed,
+ depending on the scroll position.
+ It is positioned relative until a given offset position is met in the viewport
+ - then it "sticks" in place (like position:fixed).
+ The sticky value is not supported in IE or Edge 15 and earlier versions.
+ However, for these versions the navbar will inherit default position */
+.navbar{
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* right-aligned link */
+.navbar a.right{
+    float: right;
+}
+/* active current link */
+.navbar a.active{
+    background-color: #666;
+    color:white;
+}
+
+/* change color on hover */
+.navbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* column container */
+.row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* create two equal columns that sits next to each other */
+/* sidebar (left column) */
+.side{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* main column */
+.main{
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* fake image, just for example */
+.fakeimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* footer */
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide,
+make the two columns stack on top of each other instead of next to each other */
+@media screen and(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide,
+make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px){
+    .navbar a{
+        float: none;
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>Welcome to Daphne's Website</h1>
+    <p>A <b>responsive</b> website created on my own.</p>
+</div>
+
+<div class="navbar">
+    <a href="#" class="active">Home</a>
+    <a href="#" >Article</a>
+    <a href="#" >Photo</a>
+    <a href="#" class="right">Share</a>
+</div>
+
+<div class="row">
+    <div class="side">
+        <h2>About me</h2>
+        <h5>Self-graph</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Hi! This is Daphne. Nice to meet you!</p>
+        <h3>More Text</h3>
+        <p>Some text about me.</p>
+        <div class="fakeimg" style="height:60px;">Image</div><br>
+        <div class="fakeimg" style="height:60px;">Image</div><br>
+        <div class="fakeimg" style="height:60px;">Image</div>
+    </div>
+    <div class="main">
+        <h2>Today, July 7, 2021</h2>
+        <h5>Title description, July 7,2021 </h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text...</p>
+        <p>It is a wonderful day today. It's is sunny. Some birds fly in the sky. It is a really peaceful day. </p>
+        <br>
+        <h2>Yesterday, July 6, 2021</h2>
+        <h5>Title description, July 6,2021 </h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text...</p>
+        <p>There is a flutty cat lie under the desk. How cute! </p>
+    </div>
+
+</div>
+<div class="footer">
+    <h5>Page 1</h5>
+</div>
+</body>
+</html>
